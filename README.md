@@ -13,7 +13,7 @@ This repository showcases a simple proof of concept for a dynamic form applicati
 ### React is being used to:
 - Create the dynamic form interface that switches between Product and Coverage views
 - Handle form state (manage values in each field)
-- Manage the active form (Product or Coverage)
+- Manage the active form (***Product*** or ***Coverage***)
 - Handle form submissions
 - Update the display when values change
 - Make API calls to the server to fetch and update configurations
@@ -78,15 +78,15 @@ This proof of concept demonstrates the integration of a dynamic form interface w
         extend: {},
       },
       plugins: [require("tailwindcss-animate")],
-}
 
-5 - Install Axios to interact with the Product API:
+
+4 - Install Axios to interact with the Product API:
 
     cd ../web-app
     npm install axios
 
 
-4 - Create the API project
+6 - Create the API project
 
     # Create a new directory for the API
     mkdir preoduct-data-api
