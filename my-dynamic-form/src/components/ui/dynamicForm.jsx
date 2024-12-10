@@ -3,14 +3,13 @@ import React, { useState, useEffect } from 'react';
 const DynamicForm = ({ config, formTitle }) => {
   const [formData, setFormData] = useState({});
 
-  // Reset form data when config changes
   useEffect(() => {
     const initialData = config.reduce((acc, field) => ({
       ...acc,
       [field.name]: field.value
     }), {});
     setFormData(initialData);
-  }, [config]); // This will run whenever config changes
+  }, [config]);
 
   const handleChange = (name, value) => {
     setFormData(prev => ({
@@ -25,7 +24,7 @@ const DynamicForm = ({ config, formTitle }) => {
   };
 
   const renderField = (field) => {
-    const { name, label, type, options, value } = field;
+    const { name, label, type, options, value, isReadOnly } = field;
 
     switch (type) {
       case 'text':
@@ -40,7 +39,9 @@ const DynamicForm = ({ config, formTitle }) => {
               name={name}
               value={formData[name] || ''}
               onChange={(e) => handleChange(name, e.target.value)}
-              className="form-input"
+              className={`form-input ${isReadOnly ? 'bg-gray-100' : ''}`}
+              readOnly={isReadOnly}
+              disabled={isReadOnly}
             />
           </div>
         );
@@ -56,7 +57,8 @@ const DynamicForm = ({ config, formTitle }) => {
               name={name}
               value={formData[name]}
               onChange={(e) => handleChange(name, e.target.value)}
-              className="form-select"
+              className={`form-select ${isReadOnly ? 'bg-gray-100' : ''}`}
+              disabled={isReadOnly}
             >
               {options?.map((option) => (
                 <option key={option.value} value={option.value}>
@@ -72,7 +74,6 @@ const DynamicForm = ({ config, formTitle }) => {
     }
   };
 
-  // Split the config into two arrays for two columns
   const midPoint = Math.ceil(config.length / 2);
   const leftColumnFields = config.slice(0, midPoint);
   const rightColumnFields = config.slice(midPoint);
@@ -82,7 +83,6 @@ const DynamicForm = ({ config, formTitle }) => {
       <h2 className="text-2xl font-bold mb-6">{formTitle}</h2>
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-2 gap-8">
-          {/* Left Column */}
           <div>
             {leftColumnFields.map((field) => (
               <div key={field.name}>
@@ -90,7 +90,6 @@ const DynamicForm = ({ config, formTitle }) => {
               </div>
             ))}
           </div>
-          {/* Right Column */}
           <div>
             {rightColumnFields.map((field) => (
               <div key={field.name}>

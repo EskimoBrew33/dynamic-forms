@@ -11,13 +11,15 @@ const productInfoData = [
       name: "carrierCode",
       label: "Carrier Code",
       type: "text",
-      value: "090655372"
+      value: "090655372",
+      isReadOnly: true  // This field will be read-only
     },
     {
       name: "carrierName",
       label: "Carrier Name",
       type: "text",
-      value: "Sun Life Financial"
+      value: "Sun Life Financial",
+      isReadOnly: true  // This field will be read-only
     },
     {
       name: "planName",
@@ -29,7 +31,8 @@ const productInfoData = [
       name: "productCode",
       label: "Product Code",
       type: "text",
-      value: "3FD46E3B-0839-4906-BC46-064E697A18BC"
+      value: "3FD46E3B-0839-4906-BC46-064E697A18BC",
+      isReadOnly: true  // This field will be read-only
     },
     {
       name: "shortName",
