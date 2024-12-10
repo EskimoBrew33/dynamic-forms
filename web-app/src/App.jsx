@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import DynamicForm from './components/ui/DynamicForm';
+import DynamicForm from './components/ui/dynamicForm';
 
 function App() {
   const [productConfig, setProductConfig] = useState([]);
