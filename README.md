@@ -1,4 +1,19 @@
-This is a small proof of concept for the CSS application. It uses Vite as a front end tool. It contains 2 projects: the front end, and the API. The front end fetches the data from the API (GET), and generates the forms dynamically using the json payload returned by the API. On submit, the updated is sent to the API (PUT) to update the data. The 
+
+# CSS Application Proof of Concept
+
+This repository showcases a simple proof of concept for a dynamic form application using CSS. It is built with **Vite** as the front-end tool and consists of two main projects: the **Frontend** and the **API**.
+
+### Key Features:
+- **Frontend**: The frontend fetches data from the API using a **GET** request, dynamically generating forms based on the JSON payload returned by the API.
+- **Form Submission**: When a user submits the form, the updated data is sent back to the API via a **PUT** request, which updates the stored data.
+- **API**: The API serves as a backend, retrieving data from a local JSON file on the server. Upon receiving a **PUT** request, it updates the JSON file with the new data.
+
+### Project Structure:
+- **Frontend**: Built using Vite and React
+- **API**: A simple API that handles data retrieval and updating from a JSON file.
+
+This proof of concept demonstrates the integration of a dynamic form interface with a simple backend API for data management.
+
 
 1 - To create the web app project in VSCode (optional):
 
