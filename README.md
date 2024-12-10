@@ -16,7 +16,7 @@ This repository showcases a simple proof of concept for a dynamic form applicati
 - Manage the active form (***Product*** or ***Coverage***)
 - Handle form submissions
 - Update the display when values change
-- Make API calls to the server to fetch and update configurations
+- Make API calls to the server to fetch and product data
 
 
 ### Key Features:
