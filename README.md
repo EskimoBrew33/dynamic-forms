@@ -31,7 +31,7 @@ This repository showcases a simple proof of concept for a dynamic form applicati
 
 This proof of concept demonstrates the integration of a dynamic form interface with a simple backend API for data management.
 
-### Instructions
+## Instructions
 
 
 1 - Create the web app project in VSCode (optional):
@@ -97,4 +97,13 @@ This proof of concept demonstrates the integration of a dynamic form interface w
     
     # Install necessary dependencies
     npm install express cors
+
+ ## Screenshots   
+
+![image](https://github.com/user-attachments/assets/c95e7ba6-a30a-4cdf-81bd-c66c9f010010)
+
+
+
+![image](https://github.com/user-attachments/assets/bc04aad5-cfc4-425b-a244-9ee0be7af9ba)
+
 
