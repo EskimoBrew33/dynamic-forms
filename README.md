@@ -1,7 +1,23 @@
 
 # CSS Application Proof of Concept
 
-This repository showcases a simple proof of concept for a dynamic form application using CSS. It is built with **Vite** as the front-end tool and consists of two main projects: the **Frontend** and the **API**.
+This repository showcases a simple proof of concept for a dynamic form application for CSS. It is built with **Vite** and ***React*** as the front-end tool and consists of two main projects: the **Frontend** and the **API**.
+
+### Vite is handling:
+- Running the development server
+- Auto-reloading when changes are made to files
+- Compiling JSX code to JavaScript
+- Managing the connection between the React front-end and the Express API server
+- Processing Tailwind CSS styles
+
+### React is being used to:
+- Create the dynamic form interface that switches between Product and Coverage views
+- Handle form state (manage values in each field)
+- Manage the active form (Product or Coverage)
+- Handle form submissions
+- Update the display when values change
+- Make API calls to the server to fetch and update configurations
+
 
 ### Key Features:
 - **Frontend**: The frontend fetches data from the API using a **GET** request, dynamically generating forms based on the JSON payload returned by the API.
@@ -14,8 +30,10 @@ This repository showcases a simple proof of concept for a dynamic form applicati
 
 This proof of concept demonstrates the integration of a dynamic form interface with a simple backend API for data management.
 
+### Instructions
 
-1 - To create the web app project in VSCode (optional):
+
+1 - Create the web app project in VSCode (optional):
 
     npm create vite@latest web-app -- --template react
     cd web-app
