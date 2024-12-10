@@ -23,6 +23,7 @@ This repository showcases a simple proof of concept for a dynamic form applicati
 - **Frontend**: The frontend fetches data from the API using a **GET** request, dynamically generating forms based on the JSON payload returned by the API.
 - **Form Submission**: When a user submits the form, the updated data is sent back to the API via a **PUT** request, which updates the stored data.
 - **API**: The API serves as a backend, retrieving data from a local JSON file on the server. Upon receiving a **PUT** request, it updates the JSON file with the new data.
+- The djosn data files are located here: products-data-api/data
 
 ### Project Structure:
 - **Frontend**: Built using Vite and React
