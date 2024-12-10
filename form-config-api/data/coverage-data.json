@@ -1,0 +1,221 @@
+{
+  "fields": [
+    {
+      "name": "planName",
+      "label": "Plan Name",
+      "type": "text",
+      "value": "Base Coverage III"
+    },
+    {
+      "name": "productCode",
+      "label": "Product Code",
+      "type": "text",
+      "value": "04"
+    },
+    {
+      "name": "shortName",
+      "label": "Short Name",
+      "type": "text",
+      "value": "SL_TERM_T10BASE_PREM",
+      "isReadOnly": true
+    },
+    {
+      "name": "issueGender",
+      "label": "Issue Gender",
+      "type": "options",
+      "value": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "Male"
+        },
+        {
+          "value": "2",
+          "label": "Female"
+        },
+        {
+          "value": "3",
+          "label": "Unisex"
+        },
+        {
+          "value": "4",
+          "label": "Gender Neutral"
+        }
+      ]
+    },
+    {
+      "name": "covScope",
+      "label": "Coverage Scope",
+      "type": "options",
+      "value": "1",
+      "options": [
+        {
+          "value": "1",
+          "label": "New Business"
+        },
+        {
+          "value": "2",
+          "label": "Conversion"
+        },
+        {
+          "value": "3",
+          "label": "Replacement"
+        },
+        {
+          "value": "4",
+          "label": "Reinstatement"
+        },
+        {
+          "value": "5",
+          "label": "Renewal"
+        },
+        {
+          "value": "6",
+          "label": "Rewrite"
+        }
+      ]
+    },
+    {
+      "name": "livesType",
+      "label": "Lives Type",
+      "type": "options",
+      "value": "9",
+      "options": [
+        {
+          "value": "1",
+          "label": "Single Life"
+        },
+        {
+          "value": "2",
+          "label": "Joint First to Die"
+        },
+        {
+          "value": "3",
+          "label": "Joint Last to Die"
+        },
+        {
+          "value": "4",
+          "label": "Multiple Lives"
+        },
+        {
+          "value": "5",
+          "label": "Primary"
+        },
+        {
+          "value": "6",
+          "label": "Secondary"
+        },
+        {
+          "value": "7",
+          "label": "Third"
+        },
+        {
+          "value": "8",
+          "label": "Other"
+        },
+        {
+          "value": "9",
+          "label": "Both"
+        }
+      ]
+    },
+    {
+      "name": "maturityAge",
+      "label": "Maturity Age",
+      "type": "text",
+      "value": "85"
+    },
+    {
+      "name": "maturityAgeUse",
+      "label": "Maturity Age Use",
+      "type": "options",
+      "value": "3",
+      "options": [
+        {
+          "value": "1",
+          "label": "Policy Anniversary End"
+        },
+        {
+          "value": "2",
+          "label": "Policy Anniversary Beginning"
+        },
+        {
+          "value": "3",
+          "label": "Coverage Anniversary End"
+        },
+        {
+          "value": "4",
+          "label": "Coverage Anniversary Beginning"
+        },
+        {
+          "value": "5",
+          "label": "Calendar Year End"
+        },
+        {
+          "value": "6",
+          "label": "Calendar Year Beginning"
+        }
+      ]
+    },
+    {
+      "name": "lifeCovTypeCode",
+      "label": "Life Coverage Type",
+      "type": "options",
+      "value": "6",
+      "options": [
+        {
+          "value": "1",
+          "label": "Whole Life"
+        },
+        {
+          "value": "2",
+          "label": "Universal Life"
+        },
+        {
+          "value": "3",
+          "label": "Variable Life"
+        },
+        {
+          "value": "4",
+          "label": "Term Decreasing Death Benefit"
+        },
+        {
+          "value": "5",
+          "label": "Term Return of Premium"
+        },
+        {
+          "value": "6",
+          "label": "Term Level Death Benefit"
+        },
+        {
+          "value": "7",
+          "label": "Term Increasing Death Benefit"
+        },
+        {
+          "value": "8",
+          "label": "Variable Universal Life"
+        },
+        {
+          "value": "9",
+          "label": "Indexed Universal Life"
+        },
+        {
+          "value": "10",
+          "label": "Final Expense"
+        }
+      ]
+    },
+    {
+      "name": "initialPremRenewYrs",
+      "label": "Initial Premium Renewal Years",
+      "type": "text",
+      "value": "10"
+    },
+    {
+      "name": "guarInitRenewYrs",
+      "label": "Guaranteed Initial Renewal Years",
+      "type": "text",
+      "value": "10"
+    }
+  ]
+}
