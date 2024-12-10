@@ -3,23 +3,31 @@ import axios from 'axios';
 import DynamicForm from './components/ui/DynamicForm';
 
 function App() {
-  const [formConfig, setFormConfig] = useState([]);
+  const [productInfo , setProductConfig] = useState([]);
+  const [coverage, setCoverageConfig] = useState([]);
+  const [activeForm, setActiveForm] = useState('product'); // 'product' or 'coverage'
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchFormConfig = async () => {
+    const fetchConfigs = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/api/product-info');
-        setFormConfig(response.data);
+        const [productRes, coverageRes] = await Promise.all([
+          axios.get('http://localhost:3001/api/product-info'),
+          axios.get('http://localhost:3001/api/coverage')
+
+        ]);
+        
+        setProductConfig(productRes.data);
+        setCoverageConfig(coverageRes.data.fields); // Note: we use .fields here
         setLoading(false);
       } catch (err) {
-        setError('Error fetching form configuration');
+        setError('Error fetching configurations');
         setLoading(false);
       }
     };
 
-    fetchFormConfig();
+    fetchConfigs();
   }, []);
 
   if (loading) {
@@ -40,7 +48,37 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
-      <DynamicForm config={formConfig} />
+      <div className="max-w-6xl mx-auto">
+        {/* Toggle Buttons */}
+        <div className="mb-6 flex justify-center space-x-4">
+          <button
+            onClick={() => setActiveForm('product')}
+            className={`px-6 py-2 rounded-lg font-medium ${
+              activeForm === 'product'
+                ? 'bg-blue-500 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Product Information
+          </button>
+          <button
+            onClick={() => setActiveForm('coverage')}
+            className={`px-6 py-2 rounded-lg font-medium ${
+              activeForm === 'coverage'
+                ? 'bg-blue-500 text-white'
+                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+            }`}
+          >
+            Coverage Information
+          </button>
+        </div>
+
+        {/* Form */}
+        <DynamicForm 
+          config={activeForm === 'product' ? productInfo : coverage}
+          formTitle={activeForm === 'product' ? 'Product Information' : 'Coverage Information'}
+        />
+      </div>
     </div>
   );
 }

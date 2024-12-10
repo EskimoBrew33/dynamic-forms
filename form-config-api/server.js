@@ -148,18 +148,6 @@ const coverageData= {
   label: "Coverage Product",
   fields: [
     {
-      name: "planName",
-      label: "Plan Name",
-      type: "text",
-      value: "Base Coverage"
-    },
-    {
-      name: "productCode",
-      label: "Product Code",
-      type: "text",
-      value: "04"
-    },
-    {
       name: "shortName",
       label: "Short Name",
       type: "text",

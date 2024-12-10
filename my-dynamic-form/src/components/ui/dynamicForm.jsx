@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const DynamicForm = ({ config }) => {
-  const [formData, setFormData] = useState(
-    config.reduce((acc, field) => ({
+const DynamicForm = ({ config, formTitle }) => {
+  const [formData, setFormData] = useState({});
+
+  // Reset form data when config changes
+  useEffect(() => {
+    const initialData = config.reduce((acc, field) => ({
       ...acc,
       [field.name]: field.value
-    }), {})
-  );
+    }), {});
+    setFormData(initialData);
+  }, [config]); // This will run whenever config changes
 
   const handleChange = (name, value) => {
     setFormData(prev => ({
@@ -74,8 +78,8 @@ const DynamicForm = ({ config }) => {
   const rightColumnFields = config.slice(midPoint);
 
   return (
-    <div className="max-w-6xl mx-auto mt-8 p-6 bg-white rounded-lg shadow">
-      <h2 className="text-2xl font-bold mb-6">Policy Product Form</h2>
+    <div className="max-w-6xl mx-auto p-6 bg-white rounded-lg shadow">
+      <h2 className="text-2xl font-bold mb-6">{formTitle}</h2>
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-2 gap-8">
           {/* Left Column */}
