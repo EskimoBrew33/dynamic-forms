@@ -1,7 +1,7 @@
 
 # CSS Application Proof of Concept
 
-This repository showcases a simple proof of concept for a dynamic form application for CSS. It is built with **Vite** and ***React*** as the front-end tool and consists of two main projects: the **Frontend** and the **API**.
+This repository showcases a simple proof of concept for a dynamic form application for CSS. It is built with **Vite** and **React** as the front-end tool and consists of two main projects: the **Frontend** and the **API**.
 
 ### Vite is handling:
 - Running the development server
